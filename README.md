@@ -1,4 +1,4 @@
-# news_reading
+# News Reading
 
 News Apps
 
