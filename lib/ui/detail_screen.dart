@@ -56,14 +56,16 @@ class DetailScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 15),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: SizedBox.fromSize(
-                  size: const Size.fromRadius(50),
-                  child: Image.network(
-                    height: 100,
-                    news.imageThumbnail,
-                    fit: BoxFit.fill,
+              SizedBox(
+                height: 225,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: SizedBox.fromSize(
+                    size: const Size.fromRadius(50),
+                    child: Image.asset(
+                      news.imageThumbnail,
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               ),

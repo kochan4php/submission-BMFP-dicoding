@@ -10,6 +10,26 @@ class HomeScreen extends StatelessWidget {
   static const EdgeInsets padding =
       EdgeInsets.symmetric(horizontal: 20, vertical: 10);
 
+  Widget customInputDialog(_) {
+    return Dialog(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: TextField(
+          decoration: InputDecoration(
+            hintText: "Search news",
+            prefixIcon: const Icon(Icons.search_rounded),
+            prefixIconColor: Colors.black,
+            filled: true,
+            fillColor: const Color(0xfff1f1f1),
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(50),
+                borderSide: BorderSide.none),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +45,9 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showDialog(context: context, builder: customInputDialog);
+            },
             icon: const Icon(Icons.search_outlined),
             iconSize: 30,
             color: Colors.black,
@@ -125,7 +147,7 @@ class HomeScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10),
                                   child: SizedBox.fromSize(
                                     size: const Size.fromRadius(50),
-                                    child: Image.network(
+                                    child: Image.asset(
                                       item.imageThumbnail,
                                       width: 100,
                                       height: 100,
