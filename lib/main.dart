@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           fontFamily: 'Poppins',
+          useMaterial3: false,
           appBarTheme: const AppBarTheme(
               scrolledUnderElevation: 0.0,
               backgroundColor: Colors.white,

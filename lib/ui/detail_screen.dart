@@ -9,8 +9,20 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        forceMaterialTransparency: true,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+        foregroundColor: Colors.black,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back),
+          iconSize: 28,
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+        ),
         actions: const <Widget>[
           BookmarkButton(),
           SizedBox(
@@ -39,7 +51,7 @@ class DetailScreen extends StatelessWidget {
                   ),
                   Text(news.createdAt,
                       style: const TextStyle(fontWeight: FontWeight.w400)),
-                  Text(news.readDuration,
+                  Text('${news.readDuration} read',
                       style: const TextStyle(fontWeight: FontWeight.w400)),
                 ],
               ),
@@ -61,7 +73,7 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   news.description,
                   style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 19,
                       fontFamily: 'Open Sans',
                       fontWeight: FontWeight.w400),
                 ),
@@ -106,6 +118,8 @@ class _BookmarkButtonState extends State<BookmarkButton> {
         isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_outlined,
       ),
       iconSize: 28,
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
     );
   }
 }

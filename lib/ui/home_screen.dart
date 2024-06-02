@@ -20,6 +20,8 @@ class HomeScreen extends StatelessWidget {
           icon: const Icon(Icons.menu),
           iconSize: 30,
           color: Colors.black,
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
         ),
         actions: [
           IconButton(
@@ -27,12 +29,16 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(Icons.search_outlined),
             iconSize: 30,
             color: Colors.black,
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
           ),
           IconButton(
             onPressed: () {},
             icon: const Icon(Icons.notifications_none),
             iconSize: 30,
             color: Colors.black,
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
           ),
         ],
       ),
@@ -49,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: categories.length,
                 separatorBuilder: (BuildContext context, int index) {
-                  return const SizedBox(width: 8);
+                  return const SizedBox(width: 10);
                 },
                 itemBuilder: (BuildContext context, int index) {
                   return ElevatedButton(
@@ -57,12 +63,14 @@ class HomeScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0XFF212529),
                       foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50)),
                     ),
                     child: Text(
                       categories[index].name,
                       style: const TextStyle(
                           fontWeight: FontWeight.w600,
-                          letterSpacing: 0.25,
+                          letterSpacing: 0.5,
                           fontFamily: 'Poppins'),
                     ),
                   );
@@ -138,7 +146,7 @@ class HomeScreen extends StatelessWidget {
                                     Text(
                                       item.title,
                                       style: const TextStyle(
-                                          fontSize: 16,
+                                          fontSize: 17,
                                           fontWeight: FontWeight.w600),
                                       maxLines: 3,
                                       overflow: TextOverflow.ellipsis,
