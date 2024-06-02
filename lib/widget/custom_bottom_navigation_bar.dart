@@ -30,10 +30,12 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
       selectedItemColor: const Color(0xff212529),
       backgroundColor: Colors.white,
       currentIndex: _selectedIndex,
+      showUnselectedLabels: false,
+      showSelectedLabels: true,
       selectedLabelStyle:
-          const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+          const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
       onTap: _onItemTapped,
-      iconSize: 35,
+      iconSize: 28,
     );
   }
 }
