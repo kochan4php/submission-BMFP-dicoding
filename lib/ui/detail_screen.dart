@@ -75,7 +75,7 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   news.description,
                   style: const TextStyle(
-                      fontSize: 19,
+                      fontSize: 18,
                       fontFamily: 'Open Sans',
                       fontWeight: FontWeight.w400),
                 ),
