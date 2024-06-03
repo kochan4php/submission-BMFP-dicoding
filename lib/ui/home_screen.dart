@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../model/categories.dart';
 import '../model/news.dart';
+import '../widget/custom_bottom_navigation_bar.dart';
 import './detail_screen.dart';
-// import 'package:news_reading/widget/custom_bottom_navigation_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,8 +23,9 @@ class HomeScreen extends StatelessWidget {
             filled: true,
             fillColor: const Color(0xfff1f1f1),
             border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(50),
-                borderSide: BorderSide.none),
+              borderRadius: BorderRadius.circular(50),
+              borderSide: BorderSide.none,
+            ),
           ),
         ),
       ),
@@ -92,9 +94,10 @@ class HomeScreen extends StatelessWidget {
                     child: Text(
                       categories[index].name,
                       style: const TextStyle(
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 0.5,
-                          fontFamily: 'Poppins'),
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 0.5,
+                        fontFamily: 'Poppins',
+                      ),
                     ),
                   );
                 },
@@ -108,13 +111,17 @@ class HomeScreen extends StatelessWidget {
                   Text(
                     'Breaking News',
                     style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Poppins'),
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins',
+                    ),
                   ),
                   Text(
                     'See all',
-                    style: TextStyle(fontSize: 19, fontFamily: 'Poppins'),
+                    style: TextStyle(
+                      fontSize: 19,
+                      fontFamily: 'Poppins',
+                    ),
                   )
                 ],
               ),
@@ -136,7 +143,8 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.symmetric(vertical: 5),
                         color: Colors.transparent,
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                         child: Padding(
                           padding: const EdgeInsets.all(10),
                           child: Row(
@@ -169,8 +177,9 @@ class HomeScreen extends StatelessWidget {
                                     Text(
                                       item.title,
                                       style: const TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w600),
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                       maxLines: 3,
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -184,11 +193,15 @@ class HomeScreen extends StatelessWidget {
                                         Text(
                                           item.author,
                                           style: const TextStyle(
-                                              fontWeight: FontWeight.w400),
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
-                                        Text(item.createdAt,
-                                            style: const TextStyle(
-                                                fontWeight: FontWeight.w400))
+                                        Text(
+                                          item.createdAt,
+                                          style: const TextStyle(
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ],
@@ -206,7 +219,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      // bottomNavigationBar: const CustomBottomNavigationBar(),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }

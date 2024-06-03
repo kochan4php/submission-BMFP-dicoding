@@ -18,13 +18,22 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.search_rounded), label: 'Discover'),
+          icon: Icon(Icons.home_rounded),
+          label: 'Home',
+        ),
         BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark_rounded), label: 'Saved'),
+          icon: Icon(Icons.search_rounded),
+          label: 'Discover',
+        ),
         BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_rounded), label: 'Profile'),
+          icon: Icon(Icons.bookmark_rounded),
+          label: 'Saved',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.account_circle_rounded),
+          label: 'Profile',
+        ),
       ],
       type: BottomNavigationBarType.fixed,
       selectedItemColor: const Color(0xff212529),
@@ -32,8 +41,10 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
       currentIndex: _selectedIndex,
       showUnselectedLabels: false,
       showSelectedLabels: true,
-      selectedLabelStyle:
-          const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+      selectedLabelStyle: const TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+      ),
       onTap: _onItemTapped,
       iconSize: 28,
     );

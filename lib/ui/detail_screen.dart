@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../model/news.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -38,8 +39,10 @@ class DetailScreen extends StatelessWidget {
             children: <Widget>[
               Text(
                 news.title,
-                style:
-                    const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 15),
               Row(
@@ -47,12 +50,22 @@ class DetailScreen extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     news.author,
-                    style: const TextStyle(fontWeight: FontWeight.w400),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
-                  Text(news.createdAt,
-                      style: const TextStyle(fontWeight: FontWeight.w400)),
-                  Text('${news.readDuration} read',
-                      style: const TextStyle(fontWeight: FontWeight.w400)),
+                  Text(
+                    news.createdAt,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Text(
+                    '${news.readDuration} read',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(height: 15),
@@ -75,9 +88,10 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   news.description,
                   style: const TextStyle(
-                      fontSize: 18,
-                      fontFamily: 'Open Sans',
-                      fontWeight: FontWeight.w400),
+                    fontSize: 18,
+                    fontFamily: 'Open Sans',
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
             ],
