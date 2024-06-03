@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:news_reading/model/categories.dart';
-import 'package:news_reading/model/news.dart';
-import 'package:news_reading/ui/detail_screen.dart';
-import 'package:news_reading/widget/custom_bottom_navigation_bar.dart';
+import '../model/categories.dart';
+import '../model/news.dart';
+import './detail_screen.dart';
+// import 'package:news_reading/widget/custom_bottom_navigation_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -206,7 +206,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const CustomBottomNavigationBar(),
+      // bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
