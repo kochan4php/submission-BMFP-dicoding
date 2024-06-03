@@ -1,12 +1,12 @@
 class News {
-  String imageThumbnail;
-  String title;
-  String author;
-  String authorAvatar;
-  String readDuration;
-  String description;
-  String createdAt;
-  String updatedAt;
+  final String imageThumbnail;
+  final String title;
+  final String author;
+  final String authorAvatar;
+  final String readDuration;
+  final String description;
+  final String createdAt;
+  final String updatedAt;
 
   News({
     required this.imageThumbnail,

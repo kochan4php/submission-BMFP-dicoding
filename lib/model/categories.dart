@@ -1,16 +1,16 @@
-class Categories {
-  String name;
+class Category {
+  final String name;
 
-  Categories({required this.name});
+  Category({required this.name});
 }
 
-List<Categories> categories = <Categories>[
-  Categories(name: 'All'),
-  Categories(name: 'Health'),
-  Categories(name: 'Sports'),
-  Categories(name: 'Finance'),
-  Categories(name: 'Politics'),
-  Categories(name: 'Cooking'),
-  Categories(name: 'Tech'),
-  Categories(name: 'Education'),
+List<Category> categories = <Category>[
+  Category(name: 'All'),
+  Category(name: 'Health'),
+  Category(name: 'Sports'),
+  Category(name: 'Finance'),
+  Category(name: 'Politics'),
+  Category(name: 'Cooking'),
+  Category(name: 'Tech'),
+  Category(name: 'Education'),
 ];
